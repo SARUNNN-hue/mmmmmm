@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff; /* Light background color */
+            text-align: center;
+        }
+        #morningImage {
+            cursor: pointer;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            transition: transform 0.2s; /* Smooth zoom effect */
+        }
+        #morningImage:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+        #message {
+            display: none;
+            font-size: 24px;
+            color: #4CAF50;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="click.png" id="morningImage" alt="Good Morning Image">
+        <div id="message">Good Morning! Have a great day!</div>
+    </div>
+    <script>
+        document.getElementById('morningImage').addEventListener('click', function() {
+            document.getElementById('message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
